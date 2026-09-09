@@ -19,7 +19,14 @@ const departments = [
         ]
     },
 
-    
-
-
+    {
+        name: "Banking Operations",
+        employees: [
+            { firstName: "Priyanka", lastName: "Bose" },
+            { firstName: "Hammed", lastName: "Animashaun" },
+            { firstName: "Álvaro", lastName: "Morte" },
+            { firstName: "Taylor", lastName: "Napier" },
+            { firstName: "Alan", lastName: "Simmonds" }
+        ]
+    },
 ];
