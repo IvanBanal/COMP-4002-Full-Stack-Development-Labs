@@ -112,3 +112,20 @@ const departments = [
         ]
     }
 ];
+
+/**
+ * MAIN CODE THE GENERATE THE PAGE
+ */
+// This will find my <main id="employee-directory"> in index.html.
+const directory = document.querySelector("#employee-directory");
+
+// Goes through every department in the departments array.
+departments.forEach(deparment => {
+    const section = document.createElement("section");
+
+    const heading = document.createElement("h2");
+
+    heading.textContent = department.name;
+
+    section.appendChild(heading);
+});
