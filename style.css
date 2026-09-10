@@ -46,3 +46,10 @@ Adding extra space between department and employee name list.
 h2 {
     margin-bottom: 30px;
 }
+
+/**
+Adding spacing between employee names. 
+*/
+li {
+    margin-bottom: 5px;
+}
