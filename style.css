@@ -1,0 +1,16 @@
+/**
+Using * which is a universal selector this means "select every HTML element".
+*/
+* {
+    box-sizing: border-box;
+}
+
+/**
+This will select the <body> element from the HTML, removes the default spacing, and uses the Arial, sans-serif font.
+*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
