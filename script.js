@@ -138,10 +138,12 @@ departments.forEach(deparment => {
         employeeList.appendChild(employeeItem);
     });
 
-
-
     section.appendChild(heading);
     section.appendChild(employeeList);
     directory.appendChild(section);
 });
 
+const currentYear = document.querySelector("#current-year");
+
+// Gets the current year from the computer.
+currentYear.textContent = new Date().getFullYear();
