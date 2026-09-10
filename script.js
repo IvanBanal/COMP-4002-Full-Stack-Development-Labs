@@ -46,4 +46,22 @@ const departments = [
             { firstName: "Lubomir", lastName: "Mykytiuk" }
         ]
     },
+
+    // Template
+    {
+        name: "",
+        employees: [
+            { firstName: "", lastName: "" },
+        ]
+    },
+
+    {
+        name: "Facilities",
+        employees: [
+            { firstName: "Dakota", lastName: "House" },
+            { firstName: "Lori Lea", lastName: "Okemah" },
+            { firstName: "Renae", lastName: "Morrisseau" },
+            { firstName: "Rick", lastName: "Belcourt" }
+        ]
+    },
 ];
