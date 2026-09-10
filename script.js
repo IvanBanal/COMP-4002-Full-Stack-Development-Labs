@@ -31,7 +31,7 @@ const departments = [
     },
 
     {
-        name: "Communucations",
+        name: "Communications",
         employees: [
             { firstName: "Gil", lastName: "Cardinal" },
             { firstName: "Richard J.", lastName: "Lewis" }
