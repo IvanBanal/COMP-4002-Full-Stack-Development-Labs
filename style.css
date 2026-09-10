@@ -32,3 +32,11 @@ main {
     margin: 0 auto;
     padding: 20px;
 }
+
+/**
+Adding Line and Paragraph spacing between department
+*/
+section {
+    margin-bottom: 30px;
+}
+
