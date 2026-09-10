@@ -1,8 +1,10 @@
+import { Department } from "../types/Department";
+
 /**
  * NAME AND DEPARTMENT DATA 
  */
 // We will use objects.
-const departments = [
+export const departments: Department[] = [
     {
         name: "Administration",
         employees: [
