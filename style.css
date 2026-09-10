@@ -23,3 +23,12 @@ header {
 header img {
     width: 800px;
 }
+
+/**
+Centers all the department and employee names. 
+*/
+main {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
