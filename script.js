@@ -75,4 +75,15 @@ const departments = [
             { firstName: "Danny", lastName: "Rabbit" }
         ]
     },
+
+   {
+        name: "Human Resources",
+        employees: [
+            { firstName: "Jesse Ed", lastName: "Azure" },
+            { firstName: "Stacy", lastName: "Da Silva" },
+            { firstName: "Vladimír", lastName: "Valenta" },
+            { firstName: "Samone", lastName: "Sayeses-Whitney" },
+            { firstName: "Paul", lastName: "Coeur" }
+        ]
+    },
 ];
