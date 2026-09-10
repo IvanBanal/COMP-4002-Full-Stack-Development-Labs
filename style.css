@@ -28,7 +28,7 @@ header img {
 Centers all the department and employee names. 
 */
 main {
-    max-width: 400px;
+    max-width: 250px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -52,4 +52,9 @@ Adding spacing between employee names.
 */
 li {
     margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
 }
