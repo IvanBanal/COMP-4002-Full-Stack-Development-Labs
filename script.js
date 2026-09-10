@@ -37,4 +37,13 @@ const departments = [
             { firstName: "Richard J.", lastName: "Lewis" }
         ]
     },
+
+    {
+        name: "Corporate Services",
+        employees: [
+            { firstName: "Randy", lastName: "Bradshaw" },
+            { firstName: "Tracey", lastName: "Cook" },
+            { firstName: "Lubomir", lastName: "Mykytiuk" }
+        ]
+    },
 ];
