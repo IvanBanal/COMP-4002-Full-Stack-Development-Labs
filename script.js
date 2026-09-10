@@ -29,4 +29,12 @@ const departments = [
             { firstName: "Alan", lastName: "Simmonds" }
         ]
     },
+
+    {
+        name: "Communucations",
+        employees: [
+            { firstName: "Gil", lastName: "Cardinal" },
+            { firstName: "Richard J.", lastName: "Lewis" }
+        ]
+    },
 ];
