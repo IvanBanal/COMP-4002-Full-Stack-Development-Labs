@@ -121,7 +121,7 @@ const departments = [
 
 
 // Goes through every department in the departments array.
-departments.forEach(deparment => {
+departments.forEach(department => {
     const section = document.createElement("section");
 
     const heading = document.createElement("h2");
