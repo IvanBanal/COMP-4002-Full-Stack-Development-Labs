@@ -95,4 +95,20 @@ const departments = [
             { firstName: "Jennifer", lastName: "Rodriguez (Software Developer)" }
         ]
     },
+
+    {
+        name: "IT Technician",
+        employees: [
+            { firstName: "Aiyana", lastName: "Littlebear" },
+            { firstName: "Inara", lastName: "Thunderbird" },
+            { firstName: "Kaya", lastName: "Runningbrook" },
+            { firstName: "Elara", lastName: "Firehawk" },
+            { firstName: "Siona", lastName: "Moonflower" },
+            { firstName: "Kaiyu", lastName: "Greywolf" },
+            { firstName: "Ayawamat", lastName: "Nightwind" },
+            { firstName: "Tala", lastName: "Braveheart" },
+            { firstName: "Iniko", lastName: "Stonebear" },
+            { firstName: "Onatah", lastName: "Redhawk" }
+        ]
+    }
 ];
