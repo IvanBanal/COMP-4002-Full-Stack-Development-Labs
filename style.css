@@ -40,3 +40,9 @@ section {
     margin-bottom: 30px;
 }
 
+/**
+Adding extra space between department and employee name list.
+*/
+h2 {
+    margin-bottom: 30px;
+}
