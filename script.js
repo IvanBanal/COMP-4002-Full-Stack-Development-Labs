@@ -7,7 +7,7 @@ const departments = [
         name: "Administration",
         employees: [
             { firstName: "Zoë", lastName: "Robins" },
-            { firstname: "Madeleine", lastName: "Madden" }
+            { firstName: "Madeleine", lastName: "Madden" }
         ]
     },
 
@@ -44,14 +44,6 @@ const departments = [
             { firstName: "Randy", lastName: "Bradshaw" },
             { firstName: "Tracey", lastName: "Cook" },
             { firstName: "Lubomir", lastName: "Mykytiuk" }
-        ]
-    },
-
-    // Template
-    {
-        name: "",
-        employees: [
-            { firstName: "", lastName: "" },
         ]
     },
 
