@@ -1,4 +1,5 @@
 import type { Department } from "../../types/Employee";
+import "./EmployeeDirectory.css"
 
 interface EmployeeDirectoryProps {
     departments: Department[];
