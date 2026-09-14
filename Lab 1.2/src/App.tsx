@@ -1,8 +1,18 @@
+import { Header } from "./components/Header/Header";
+import { EmployeeDirectory } from "./components/EmployeeDirectory/EmployeeDirectory";
+import { Footer } from "./components/Footer/Footer";
+import { departments } from "./data/departments";
+import "./App.css";
+
 function App() {
     return (
         <>
-            <h1>Pixell River Employee Directory</h1>
-        </>
+            <Header />
+
+            <EmployeeDirectory departments={departments} />
+
+            <Footer />
+        </>    
     );
 }
 
