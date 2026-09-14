@@ -1,7 +1,7 @@
 export function Header() {
     return (
         <header>
-            <img src="images/Pixell_River_logo.png" alt="Pixell River Financial logo"/>
+            <img src="/images/Pixell_River_logo.png" alt="Pixell River Financial logo"/>
 
             <div>
                 <h1>Pixell River Employee Directory</h1>
