@@ -1,4 +1,4 @@
-import { Department } from "../types/Department";
+import type { Department } from "../types/Employee";
 
 /**
  * NAME AND DEPARTMENT DATA 
