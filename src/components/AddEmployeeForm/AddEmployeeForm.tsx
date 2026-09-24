@@ -4,7 +4,22 @@ import { useState } from "react";
 export function AddEmployeeForm() {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
+    const [error, setError] = useState("");
 
+    function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+        // This will prevent the browser's default behavior for this event.
+        event.preventDefault();
+
+        // Clear any previous validation message.
+        setError("");
+
+        // Validate First Name.
+        if (firstName.trim().length < 3) {
+            setError("First name must be at least 3 characters.");
+            return;
+        }
+    }
+ 
     return (
         <form>
             <h2>Add Employee</h2>
