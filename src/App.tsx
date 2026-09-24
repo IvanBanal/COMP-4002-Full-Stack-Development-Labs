@@ -5,6 +5,7 @@ import { departments } from "./data/departments";
 import "./App.css";
 import { useState } from "react";
 import type { Department } from "./types/Employee";
+import { AddEmployeeForm } from "./components/AddEmployeeForm/AddEmployeeForm";
 
 function App() {
     /**
@@ -22,6 +23,8 @@ function App() {
             <Header />
 
             <EmployeeDirectory departments={departments} />
+
+            <AddEmployeeForm />
 
             <Footer />
         </>    
