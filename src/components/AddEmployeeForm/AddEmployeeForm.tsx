@@ -1,17 +1,9 @@
-import "./AddEmployeeForm.css"
+import "./AddEmployeeForm.css";
 import { useState } from "react";
-import type { Department } from "../../types/Employee";
-
-interface AddEmployeeFormProps {
-    departments: Department[];
-}
 
 export function AddEmployeeForm() {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
-    const [department, setDepartment] = useState("");
-    const [error, setError] = useState("");
-
 
     return (
         <form>
