@@ -4,6 +4,9 @@ import { useState } from "react";
 export function AddEmployeeForm() {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
+    const [department, setDepartment] = useState("");
+    const [error, setError] = useState("");
+
 
     return (
         <form>
