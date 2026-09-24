@@ -1,0 +1,15 @@
+form {
+    max-width: 250px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+section {
+    max-width: 200px;
+    margin: 0 auto;
+}
