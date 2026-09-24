@@ -3,6 +3,7 @@ import { useState } from "react";
 
 export function AddEmployeeForm() {
     const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
 
     return (
         <form>
@@ -25,6 +26,15 @@ export function AddEmployeeForm() {
                      * the firstName state with that value. 
                      */
                     onChange={(event) => setFirstName(event.target.value)}
+                />
+            </label>
+            
+            <label>
+                Last Name:
+                <input
+                    type="text"
+                    value={lastName}
+                    onChange={(event) => setLastName(event.target.value)}
                 />
             </label>
         </form>
