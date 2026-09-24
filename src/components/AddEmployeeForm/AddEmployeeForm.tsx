@@ -28,7 +28,6 @@ export function AddEmployeeForm() {
                     onChange={(event) => setFirstName(event.target.value)}
                 />
             </label>
-            
             <label>
                 Last Name:
                 <input

@@ -3,3 +3,8 @@ form {
     margin: 0 auto;
     padding: 20px;
 }
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+}
