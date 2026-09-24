@@ -5,6 +5,7 @@ export function AddEmployeeForm() {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [error, setError] = useState("");
+    const [department, setDepartment] = useState("");
 
     function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         // This will prevent the browser's default behavior for this event.
@@ -16,6 +17,13 @@ export function AddEmployeeForm() {
         // Validate First Name.
         if (firstName.trim().length < 3) {
             setError("First name must be at least 3 characters.");
+            return;
+        }
+
+        // Validate department.
+        // Checks if department exists.
+        if (!department) {
+            setError("Please select a department.");
             return;
         }
     }
