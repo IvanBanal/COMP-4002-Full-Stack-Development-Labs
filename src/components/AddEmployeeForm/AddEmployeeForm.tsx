@@ -1,3 +1,5 @@
+import "./AddEmployeeForm.css"
+
 export function AddEmployeeForm() {
     return (
         <form>
