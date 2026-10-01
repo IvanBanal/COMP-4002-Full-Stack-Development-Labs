@@ -1,0 +1,9 @@
+.organization-person {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.organization-person span:first-child {
+    width: 200px;
+}
