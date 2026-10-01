@@ -1,11 +1,14 @@
-import { Header } from "./components/Header/Header";
+
 import { EmployeeDirectory } from "./components/EmployeeDirectory/EmployeeDirectory";
-import { Footer } from "./components/Footer/Footer";
 import { departments } from "./data/departments";
 import "./App.css";
 import { useState } from "react";
 import type { Employee } from "./types/Employee";
 import { AddEmployeeForm } from "./components/AddEmployeeForm/AddEmployeeForm";
+import { Routes, Route } from "react-router-dom";
+import { Layout } from "./components/Layout/Layout";
+import { Organization } from "./components/Organization/Organization";
+import { roles } from "./data/roles";
 
 function App() {
     /**
@@ -47,18 +50,27 @@ function App() {
     }
 
     return (
-        <>
-            <Header />
+        <Routes>
+            <Route path="/" element={<Layout />}>
+                <Route 
+                    path="employees"
+                    element={
+                        <>
+                            <EmployeeDirectory departments={departmentList} />
+                            <AddEmployeeForm
+                                departments={departmentList}
+                                onAddEmployee={addEmployee}
+                            />
+                        </>
+                    }
+                />
 
-            <EmployeeDirectory departments={departmentList} />
-
-            <AddEmployeeForm 
-                departments={departmentList}
-                onAddEmployee={addEmployee}
-            />
-
-            <Footer />
-        </>    
+                <Route 
+                    path="organization"
+                    element={<Organization roles={roles} />}
+                />
+            </Route>
+        </Routes>
     );
 }
 
