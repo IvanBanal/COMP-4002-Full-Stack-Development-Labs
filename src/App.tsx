@@ -1,5 +1,5 @@
 
-import { EmployeeDirectory } from "./components/EmployeeDirectory/EmployeeDirectory";
+import { EmployeeDirectory } from "./pages/EmployeeDirectory/EmployeeDirectory";
 import { departments } from "./data/departments";
 import "./App.css";
 import { useState } from "react";
@@ -7,7 +7,7 @@ import type { Employee } from "./types/Employee";
 import { AddEmployeeForm } from "./components/AddEmployeeForm/AddEmployeeForm";
 import { Routes, Route } from "react-router-dom";
 import { Layout } from "./components/Layout/Layout";
-import { Organization } from "./components/Organization/Organization";
+import { Organization } from "./pages/Organization/Organization";
 import { roles } from "./data/roles";
 
 function App() {
