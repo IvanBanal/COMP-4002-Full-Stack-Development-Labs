@@ -28,7 +28,7 @@ export const employeeRepo = {
             throw new Error("Department does not exist.");
         }
 
-        // Creaeting a copy of the employee object here using spread operator. 
+        // Creating a copy of the employee object here using spread operator. 
         department.employees.push({ ...employee });
 
         return { ...employee };
