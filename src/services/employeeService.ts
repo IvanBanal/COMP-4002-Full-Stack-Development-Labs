@@ -7,3 +7,10 @@ export interface CreateEmployeeResult {
     employee?: Employee;
 }
 
+export const employeeService = {
+    // Will retrieve department data through the repository.
+    async getDepartments(): Promise<Department[]> {
+        return employeeRepo.getDepartments();
+    },
+
+}
