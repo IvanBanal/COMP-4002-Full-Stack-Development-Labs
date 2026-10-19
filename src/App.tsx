@@ -8,7 +8,6 @@ import { roles } from "./data/roles";
 import { employeeService } from "./services/employeeService";
 import type { Department, Employee } from "./types/Employee";
 import "./App.css";
-import { departments } from "./data/departments";
 
 function App() {
     const [departmentList, setDepartmentList] = useState<Department[]>([]);
