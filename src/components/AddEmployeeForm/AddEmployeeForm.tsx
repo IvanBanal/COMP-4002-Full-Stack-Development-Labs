@@ -1,6 +1,5 @@
 import "./AddEmployeeForm.css";
 import { useState } from "react";
-import type { FormEvent } from "react";
 import type { Department, Employee } from "../../types/Employee";
 import { useFormInput } from "../../hooks/useFormInput";
 
