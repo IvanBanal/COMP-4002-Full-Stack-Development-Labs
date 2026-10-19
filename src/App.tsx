@@ -1,52 +1,44 @@
-
-import { EmployeeDirectory } from "./pages/EmployeeDirectory/EmployeeDirectory";
-import { departments } from "./data/departments";
-import "./App.css";
-import { useState } from "react";
-import type { Employee } from "./types/Employee";
-import { AddEmployeeForm } from "./components/AddEmployeeForm/AddEmployeeForm";
+import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import { EmployeeDirectory } from "./pages/EmployeeDirectory/EmployeeDirectory";
+import { AddEmployeeForm } from "./components/AddEmployeeForm/AddEmployeeForm";
 import { Layout } from "./components/Layout/Layout";
 import { Organization } from "./pages/Organization/Organization";
 import { roles } from "./data/roles";
+import { employeeService } from "./services/employeeService";
+import type { Department, Employee } from "./types/Employee";
+import "./App.css";
+import { departments } from "./data/departments";
 
 function App() {
-    /**
-     * For reference: 
-     * deparmentList is the state variable. 
-     * setDepartmentList is the function used to update the current departments array with a new one.
-     * Department[] is the state type annotation for departmentList. 
-     * Department[] means an array containing Department objects. 
-     * departments is the initial value of the array containing Department objects.
-     */
-    const [departmentList, setDepartmentList] = useState(departments);
+    const [departmentList, setDepartmentList] = useState<Department[]>([]);
+    const [error, setError] = useState("");
 
-    function addEmployee(departmentName: string, employee: Employee) {
-        // Using setDepartmentList to update the state and then giving it an arrow function. 
-        // Goes through every department with map.
-        setDepartmentList((currentDepartments) => 
-            currentDepartments.map((department) => {
-                // Checks whether the department selected by the user matches the current department. 
-                // Without this check, the new employee would be added to every department.
-                if (department.name === departmentName) {
-                    return {
-                        // Using spread operator to copy everything from the existing department. 
-                        ...department,
+    // Load departments. 
+    useEffect(() => {
+        async function loadDepartments() {
+            try {
+                const departments = await employeeService.getDepartments();
+                setDepartmentList(departments);
+            } catch {
+                setError("Unable to load departments.")
+            }
+        }
 
-                        /**
-                         * Creates a new employees array by copying the existing employees and adding the new employee.
-                         */
-                        employees: [
-                            ...department.employees,
-                            employee
-                        ]
-                    };  
-                }
+        loadDepartments();
+    }, []);
 
-                // Return department if nothing changes. 
-                return department;
-            })
-        );
+    // Ask the service to create an employee.
+    async function addEmployee(departmentName: string, employee: Employee) {
+        const result = await employeeService.createEmployee(departmentName, employee);
+
+        // Refresh department data after successful creation.
+        if (result.success) {
+            const departments = await employeeService.getDepartments();
+            setDepartmentList(departments);
+        }
+
+        return result;
     }
 
     return (
@@ -56,7 +48,12 @@ function App() {
                     path="employees"
                     element={
                         <>
-                            <EmployeeDirectory departments={departmentList} />
+                            {error && <p role="alert">{error}</p>}
+
+                            <EmployeeDirectory 
+                                departments={departmentList} 
+                            />
+
                             <AddEmployeeForm
                                 departments={departmentList}
                                 onAddEmployee={addEmployee}
