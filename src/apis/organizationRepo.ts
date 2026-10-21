@@ -13,4 +13,15 @@ export const organizationRepo = {
             ...person
         }));
     },
+
+    // Create a new organization record.
+    async createPerson(person: Role): Promise<Role> {
+        const newPerson = { ...person };
+
+        organizationData.push(newPerson);
+        
+        return { ...newPerson };
+    }
+
+    
 }
