@@ -24,8 +24,33 @@ export function useAddRoleForm({ onAddRole }: UseAddRoleFormProps) {
             value.trim() === "" ? "Please enter a role." : null  
         );
 
+        // Return if first name or valid role are invalid. 
         if (!validFirstName || !validRole) {
             return;
         }
+
+        try {
+            const result = await onAddRole({firstName: firstName.value, lastName: lastName.value, role: role.value});
+
+            if (!result.success) {
+                setError(result.message ?? "Unable to create person.");
+                return; 
+            }
+
+            firstName.reset();
+            lastName.reset();
+            role.reset();
+        } catch {
+            setError("An error occured while creating the person.");
+        }
     }
+
+    return {
+        firstName,
+        lastName,
+        role,
+        error,
+        setError,
+        handleSubmit
+    };
 }
