@@ -13,7 +13,7 @@ export interface CreatePersonResult {
     person?: Role;
 }
 
-export const orgnaizationService = {
+export const organizationService = {
     async getRoles(): Promise<Role[]> {
         return organizationRepo.getRoles();
     },

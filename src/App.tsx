@@ -5,7 +5,7 @@ import { AddEmployeeForm } from "./components/AddEmployeeForm/AddEmployeeForm";
 import { Layout } from "./components/Layout/Layout";
 import { Organization } from "./pages/Organization/Organization";
 import { employeeService } from "./services/employeeService";
-import { orgnaizationService } from "./services/organizationService";
+import { organizationService } from "./services/organizationService";
 import type { Department, Employee } from "./types/Employee";
 import type { Role } from "./types/Role";
 import "./App.css";
@@ -34,7 +34,7 @@ function App() {
     useEffect(() => {
         async function loadRoles() {
             try {
-                const roles = await orgnaizationService.getRoles();
+                const roles = await organizationService.getRoles();
                 setOrganizationRoles(roles);
             } catch {
                 setOrganizationError("Unable to load organization records.");
@@ -59,11 +59,11 @@ function App() {
 
     // Ask the service to create a person.
     async function addRole(input: {firstName: string; lastName: string; role: string;}) {
-        const result = await orgnaizationService.createPerson(input);
+        const result = await organizationService.createPerson(input);
 
         if (result.success) {
             try {
-                const roles = await orgnaizationService.getRoles();
+                const roles = await organizationService.getRoles();
                 setOrganizationRoles(roles);
                 setOrganizationError("");
             } catch {
