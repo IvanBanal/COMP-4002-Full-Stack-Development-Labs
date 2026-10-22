@@ -32,6 +32,7 @@ export function AddRoleForm({ onAddRole }: AddRoleFormProps) {
                             setError("");
                         }}
                     />
+                    {firstName.message && (<p role="alert">{firstName.message}</p>)}
                 </div>
 
                 <div>
