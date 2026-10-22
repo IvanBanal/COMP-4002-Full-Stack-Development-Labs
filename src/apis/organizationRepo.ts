@@ -22,6 +22,4 @@ export const organizationRepo = {
         
         return { ...newPerson };
     }
-
-    
-}
+};
