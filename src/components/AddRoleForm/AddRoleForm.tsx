@@ -27,6 +27,20 @@ export function AddRoleForm({ onAddRole }: AddRoleFormProps) {
                         type="text"
                         value={firstName.value}
                         onChange={(event) => {
+                            firstName.setValue(event.target.value);
+                            firstName.setMessage("");
+                            setError("");
+                        }}
+                    />
+                </div>
+
+                <div>
+                    <label htmlFor="personLastName">Last Name:</label>
+                    <input 
+                        id="personLastName"
+                        type="text"
+                        value={lastName.value}
+                        onChange={(event) => {
                             lastName.setValue(event.target.value);
                             lastName.setMessage("");
                             setError("");
