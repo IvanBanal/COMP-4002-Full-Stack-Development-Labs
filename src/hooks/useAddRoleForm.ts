@@ -24,6 +24,8 @@ export function useAddRoleForm({ onAddRole }: UseAddRoleFormProps) {
             value.trim() === "" ? "Please enter a role." : null  
         );
 
-        
+        if (!validFirstName || !validRole) {
+            return;
+        }
     }
 }
