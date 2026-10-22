@@ -11,4 +11,9 @@ export function useAddRoleForm({ onAddRole }: UseAddRoleFormProps) {
     const lastName = useFormInput();
     const role = useFormInput();
     const [error, setError] = useState("");
+
+    async function handleSubmit(event: React.SubmitEvent<HTMLFormElement>) {
+        event.preventDefault();
+        setError("");
+    }
 }
