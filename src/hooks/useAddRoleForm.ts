@@ -19,5 +19,11 @@ export function useAddRoleForm({ onAddRole }: UseAddRoleFormProps) {
         const validFirstName = firstName.validate((value) => 
             value.trim().length < 3 ? "First name must be at least 3 characters." : null
         );
+
+        const validRole = role.validate((value) => 
+            value.trim() === "" ? "Please enter a role." : null  
+        );
+
+        
     }
 }
