@@ -15,5 +15,9 @@ export function useAddRoleForm({ onAddRole }: UseAddRoleFormProps) {
     async function handleSubmit(event: React.SubmitEvent<HTMLFormElement>) {
         event.preventDefault();
         setError("");
+
+        const validFirstName = firstName.validate((value) => 
+            value.trim().length < 3 ? "First name must be at least 3 characters." : null
+        );
     }
 }
